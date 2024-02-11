@@ -3,6 +3,8 @@ import { Input , Collapse, Avatar, Modal, Select } from "antd";
 import { DownOutlined, SearchOutlined, EditTwoTone , DeleteOutlined, CheckCircleOutlined, CloseCircleOutlined} from "@ant-design/icons";
 import data from "../celebrities.json";
 import moment from "moment";
+import "../App.css";
+
 const CardList = () => {
     const { TextArea } = Input;
 
@@ -74,7 +76,7 @@ const CardList = () => {
         return (
             <div style={{ height: '90px', display: 'flex', alignItems: 'center' }}>
                 <Avatar size={64} style={{ backgroundColor: '#000', marginRight: '40px' }} src={item.picture} />
-                {(isEdit && activeCard===item.id) ?<><Input defaultValue={item.first} name="first" style={{width:'125px'}}  onChange={handleInputChange}/> <Input defaultValue={item.last} name="last" style={{width:'125px'}}  onChange={handleInputChange}/></>:<h1>{item.first + " " + item.last}</h1>}
+                {(isEdit && activeCard===item.id) ?<><Input defaultValue={item.first} name="first" className="name-input" onChange={handleInputChange}/> <Input defaultValue={item.last} className="name-input" name="last" onChange={handleInputChange}/></>:<h1>{item.first + " " + item.last}</h1>}
             </div>
         )
     }
@@ -142,7 +144,7 @@ const CardList = () => {
                 <div key={item.id} style={{ margin: "30px 0px", border: '2px solid #EAECCC', borderRadius: '20px' }}>
                     <Collapse
                         bordered={false}
-                        collapsible={isEdit?'icon':'header'}
+                        collapsible={isEdit ? 'icon' : 'header'}
                         expandIcon={({ isActive }) => <span style={{ fontSize: '28px', marginTop: '70px' }}><DownOutlined rotate={isActive ? 180 : 0} /></span>}
                         expandIconPosition={"end"}
                         activeKey={activeCard === item.id ? [item.id] : []}

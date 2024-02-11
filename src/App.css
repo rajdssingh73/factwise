@@ -1,24 +1,12 @@
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 50px; /* Adjust padding as needed */
-}
-
-.logo {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
 .main-div {
   margin: 10px 20%;
 }
 
 .content-agc {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-right: 100px;
+  margin-right: 20%;
   margin-bottom: 10px;
 }
 
@@ -37,17 +25,23 @@
   outline: none;
 }
 
+.name-input {
+  width: 200px;
+}
+
 .custom-datepicker:hover,
 .custom-datepicker:focus {
   border-color: #40a9ff;
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
+  .main-div {
+    margin: 10px 1%;
+  } 
+  .content-agc {
+    margin-right: 0px;
   }
-}
-
-#components-collapse-demo-collapsible .ant-space {
-  width: 100%;
+  .name-input {
+    width: 100px;
+  }
 }
