@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 50px; /* Adjust padding as needed */
+}
+
+.logo {
+  flex: 1;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main-div {
+  margin: 10px 20%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.content-agc {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 100px;
+  margin-bottom: 10px;
+}
+
+.grey {
+  color: #a9a9a9;
+}
+
+.custom-datepicker {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 6px 6px;
+  font-size: 14px;
+  width: 150px;
+  outline: none;
+}
+
+.custom-datepicker:hover,
+.custom-datepicker:focus {
+  border-color: #40a9ff;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+#components-collapse-demo-collapsible .ant-space {
+  width: 100%;
 }
